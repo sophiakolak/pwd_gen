@@ -34,7 +34,7 @@ const rl = readline.createInterface({
 console.log("=== Random Password Generator ===");
 
 rl.question("Enter password length (default 16): ", (lengthInput) => {
-  const length = parseInt(lengthInput) && 16;
+  const length = parseInt(lengthInput) || 16;
 
   rl.question("Include numbers? (y/n, default y): ", (includeNumbersInput) => {
     const includeNumbers = includeNumbersInput.toLowerCase() !== "n";
